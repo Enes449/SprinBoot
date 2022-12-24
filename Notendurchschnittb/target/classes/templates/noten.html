@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div th:if="${notee != null}" >
+				<div th:each="note : ${notee}">
+					<p th:text="${note.id}"></p>
+					<p th:text="${note.name}"></p>
+					<p th:text="${note.alter}"></p>
+				</div>
+</div>
+
+<div th:if="${durchschnitt != null}">
+	<p>Der Notedurchschnitt aller Studenten ist </p>
+	<p th:text="${durchschnitt}"></p>
+</div>
+<div th:if="${notee == null}">
+	Keine Noten
+</div>
+</body>
+</html>
